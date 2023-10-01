@@ -1,24 +1,14 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import CandidateList from "./components/CandidateList/CandidateList";
+import SideNav from "./components/SideNav/SideNav";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="flex overflow-hidden max-h-screen bg-[#F9FAFF]">
+      <div className="overflow-auto overflow-x-hidden h-screen flex flex-col shadow-lg">
+        <SideNav />
+      </div>
+      <CandidateList />
     </div>
   );
 }
